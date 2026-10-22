@@ -1,0 +1,143 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6adad, #c8b6ff);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            transition: 0.4s;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            width: 100%;
+            animation: appear 1s ease;
+            transition: 0.4s;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #6c3fc5;
+            font-size: 32px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #c8b6ff;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #6c3fc5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 7px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #492494;
+            transform: translateY(-3px);
+        }
+
+        /* الوضع الليلي */
+        body.dark {
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        body.dark .card {
+            background: #222;
+        }
+
+        body.dark h1 {
+            color: #c8b6ff;
+        }
+
+        body.dark p {
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Welcome! 👋</h1>
+
+        <img
+            class="photo"
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300"
+            alt="Profile photo"
+        >
+
+        <p id="message">
+            Marhba bik f website dyali! 🚀
+        </p>
+
+        <button onclick="showMessage()">
+            Klik Hna ✨
+        </button>
+
+        <button onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Bravo! Rak katwlli Web Developer! 🔥";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>
+```
